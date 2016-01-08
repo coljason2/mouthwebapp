@@ -3,6 +3,7 @@ package service;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,6 +13,7 @@ import org.jsoup.select.Elements;
 import dataentity.airData;
 
 public class airparses {
+	private static Logger log = Logger.getLogger(airparses.class.getName());
 	private final static String url = "http://opendata2.epa.gov.tw/AQX.xml";
 	List<airData> datas = new ArrayList<airData>();
 
@@ -19,7 +21,6 @@ public class airparses {
 		try {
 			Document doc = Jsoup.connect(url).get();
 			Elements tests = doc.getElementsByTag("Data");
-
 			for (Element testElement : tests) {
 				airData data = new airData();
 				data.seCountry(testElement.getElementsByTag("County").text());
