@@ -13,6 +13,8 @@
 			<li class="pure-menu-item"><a
 				href="<%=request.getContextPath()%>/airpollution"
 				class="pure-menu-link">空污指數</a></li>
+			<li class="pure-menu-item"><a href="goldprice"
+				class="pure-menu-link">黃金現價</a></li>
 			<li class="pure-menu-item"><a href="about"
 				class="pure-menu-link">關於</a></li>
 
