@@ -23,12 +23,13 @@ public class airpollution extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		log.info("---------------------------------airpollution-doGet----------------");
 		doPost(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
+		log.info("---------------------------------airpollution-doPost----------------");
 		airparses getairdata = new airparses();
 		log.info(getairdata.toString());
 		request.setAttribute("data", getairdata.getWebData());
