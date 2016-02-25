@@ -4,6 +4,55 @@
 <html>
 <head>
 <jsp:include page="/pages/layout/meta.jsp"></jsp:include>
+<!-- fullcalendar -->
+<link href='<%=request.getContextPath()%>/fullcalendar/fullcalendar.css'
+	rel='stylesheet' />
+<link
+	href='<%=request.getContextPath()%>/fullcalendar/fullcalendar.print.css'
+	rel='stylesheet' media='print' />
+<script
+	src='<%=request.getContextPath()%>/fullcalendar/lib/moment.min.js'></script>
+<script
+	src='<%=request.getContextPath()%>/fullcalendar/lib/jquery.min.js'></script>
+<script
+	src='<%=request.getContextPath()%>/fullcalendar/fullcalendar.min.js'></script>
+<script src='<%=request.getContextPath()%>/fullcalendar/lang-all.js'></script>
+<script>
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+
+			header : {
+				left : 'prev,next today',
+				center : 'title',
+				right : 'month,agendaWeek,agendaDay'
+			},
+			defaultDate : '2016-01-12',
+			lang : 'zh-tw',
+			editable : true,
+			eventLimit : true, // allow "more" link when too many events
+			
+			events : {
+				googleCalendarId : 'zh.taiwan%23holiday@group.v.calendar.google.com'
+			}
+
+		});
+
+	});
+</script>
+<style>
+body {
+	margin: 40px 10px;
+	padding: 0;
+	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+}
+
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
+}
+</style>
 <title>Home</title>
 </head>
 <body>
@@ -18,11 +67,11 @@
 			</div>
 
 			<div class="content">
-				<h2></h2>
+				<div id='calendar'></div>
 			</div>
 		</div>
-
-		<script src="<%=request.getContextPath()%>/pages/layout/js/ui.js"></script>
+	</div>
+	<script src="<%=request.getContextPath()%>/pages/layout/js/ui.js"></script>
 </body>
 
 
