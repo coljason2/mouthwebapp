@@ -30,6 +30,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>goldprice</servlet-name>
 		<url-pattern>/goldprice</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>relateapp</servlet-name>
+		<servlet-class>urlpattern.relateapp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>relateapp</servlet-name>
+		<url-pattern>/relateapp</url-pattern>
+	</servlet-mapping>
 	<!-- welcome -->
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
