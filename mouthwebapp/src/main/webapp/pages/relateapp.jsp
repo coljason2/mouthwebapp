@@ -22,7 +22,7 @@
 					<h2>
 						<p>
 						<h2>
-							要價查詢 <a href="http://mymedicinequery.herokuapp.com/"
+							藥價查詢 <a href="http://mymedicinequery.herokuapp.com/"
 								target="_blank">http://mymedicinequery.herokuapp.com/<a>
 						</h2>
 						<p>
@@ -30,11 +30,16 @@
 							聚餐專用 <a href="https://findteacherproject.herokuapp.com/"
 								target="_blank">https://findteacherproject.herokuapp.com/</a>
 						</h2>
+						<h2>
+							抽籤測試 <a href="https://ccumisgraduate.herokuapp.com/"
+								target="_blank">https://ccumisgraduate.herokuapp.com/</a>
+						</h2>
 			</div>
 		</div>
 	</div>
 
 
 	<script src="<%=request.getContextPath()%>/pages/layout/js/ui.js"></script>
+	<jsp:include page="/pages/layout/backTotop.jsp"></jsp:include>
 </body>
 </html>

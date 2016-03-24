@@ -59,6 +59,7 @@
 		</div>
 	</div>
 	<script src="<%=request.getContextPath()%>/pages/layout/js/ui.js"></script>
+	<jsp:include page="/pages/layout/backTotop.jsp"></jsp:include>
 </body>
 
 
