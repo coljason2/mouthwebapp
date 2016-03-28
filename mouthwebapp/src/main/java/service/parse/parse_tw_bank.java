@@ -8,6 +8,7 @@ import org.jsoup.nodes.Element;
 
 import dataentity.goldEntity;
 
+//Basic json sample
 public class parse_tw_bank {
 
 	final static String tw_bank = "http://rate.bot.com.tw/Pages/Static/UIP005.zh-TW.htm";

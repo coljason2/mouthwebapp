@@ -7,22 +7,22 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import dataentity.goldEntity;
-
+// Normal parse html
 public class parse_fubon_bank {
 
-	final static String tw_bank = "https://ebank.taipeifubon.com.tw/B2C/common/Index.faces";
+	final static String tw_bank = "https://ebank.taipeifubon.com.tw/B2C/cfhqu/cfhqu002/CFHQU002_Home.faces?menuId=CFH04&";
 	goldEntity price = null;
 
 	public goldEntity getprice() {
 
 		Document doc;
 		try {
-			doc = Jsoup.connect(tw_bank).get();
-			Element table = doc.getElementById("GoldBankBookForTWD");
+			doc = Jsoup.connect(tw_bank).userAgent("Mozilla/5.0").validateTLSCertificates(false).get();
+			Element table = doc.getElementById("con_white");
 			price = new goldEntity();
-			price.setBank("台灣銀行");
-			price.setTw_banksell(table.getElementsByClass("decimal").get(6).text());
-			price.setTw_bankbuy(table.getElementsByClass("decimal").get(13).text());
+			price.setBank("富邦銀行");
+			price.setTw_banksell(table.getElementsByClass("rt").get(1).text());
+			price.setTw_bankbuy(table.getElementsByClass("rt").get(0).text());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
