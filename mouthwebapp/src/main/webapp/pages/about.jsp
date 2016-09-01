@@ -16,6 +16,9 @@
 				<h1>關於</h1>
 				<h2>Just practice jsp and test web</h2>
 			</div>
+			<div class="content">
+				<h3>個人練習網頁</h3>
+			</div>
 		</div>
 	</div>
 
